@@ -47,6 +47,12 @@ export class OrderService {
       },
       tips: 10,
       webhookUrl: 'https://example.com/v2/logistic/event',
+      items: [
+        {
+          "quantity": "2",
+          "name": "Plywood"
+        }
+      ],
     };
 
     const quote = await this.rovaClient.createQuote(sampleOrder);

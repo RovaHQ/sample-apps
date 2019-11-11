@@ -142,6 +142,7 @@ export class Client {
       });
       return result;
     } catch (err) {
+      console.log(err.response);
       if (!retry) throw err;
 
       const { statusCode } = err.response;
