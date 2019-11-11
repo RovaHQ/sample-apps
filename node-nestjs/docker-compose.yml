@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+  node-nestjs:
+    build:
+      context: .
+    ports:
+        - 3000:3000
+    entrypoint: npm run start:dev
+    volumes:
+      - .:/node-nestjs:rw
+    env_file:
+      - env
