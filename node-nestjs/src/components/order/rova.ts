@@ -47,7 +47,7 @@ export class Client {
           const { statusCode, headers } = err.response;
           switch (statusCode) {
             case 302:
-              return headers.location.replace('?code=', '');
+              return headers.location.replace(/.*?code=/, '');
             default:
               throw err;
           }
